@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
     // Create a private member variable that can hold our WebView
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         // -- Commit and push to your github fork
         // 5. Enter the url to load in our WebView
         // -- Commit and push to your github fork
+
+        WebView webView = new WebView(this);
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        setContentView(webView);
+
+        webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
     }
 
     @Override
