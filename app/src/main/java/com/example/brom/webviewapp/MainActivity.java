@@ -12,6 +12,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
+    private View.OnClickListener view;
+    private WebView webView;
     // Create a private member variable that can hold our WebView
 
     @Override
@@ -22,6 +24,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
+            }
+        });
+        /*
+        fab.setOnClickListener(new view.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+
+                webView.loadUrl("file:///android_asset/about.html");
+
+            }
+        });
+        */
         // The FAB-code can be removed
 
         // 1. Create a WebView element in the layout file content_main.xml
@@ -36,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
         // 5. Enter the url to load in our WebView
         // -- Commit and push to your github fork
 
-        WebView webView = new WebView(this);
+        webView = findViewById(R.id.my_webview);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        setContentView(webView);
+        // setContentView(webView);
 
        // webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
-        webView.loadUrl("file:///android_asset/about.html");
+       // webView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
