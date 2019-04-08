@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         setContentView(webView);
 
-        webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
+       // webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
+        webView.loadUrl("file:///android_asset/about.html");
     }
 
     @Override
