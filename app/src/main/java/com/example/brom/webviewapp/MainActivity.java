@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 webView.loadUrl("http://wwwlab.iit.his.se/g18marma/mobilapplikationsdesign/projekt/sid1.html");
             }
         });
-        /*
-        fab.setOnClickListener(new view.OnClickListener(){
+
+        FloatingActionButton fab2 = findViewById(R.id.fab2);
+        fab2.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        */
         // The FAB-code can be removed
 
         // 1. Create a WebView element in the layout file content_main.xml
